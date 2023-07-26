@@ -1,5 +1,5 @@
 # Meal Recipe Page Sample
--Enable users to search for meal recipes and the ingredients.
+-Enable users to search for meal recipes and the ingredients. <br>
 -API was used to pull the data
 
 
