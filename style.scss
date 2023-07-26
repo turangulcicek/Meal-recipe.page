@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin mobil{
+    @media (max-width:600px){
+        @content
+    }
+}
+
+@mixin ipad {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+
+
+body {
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+}
+// header area
+.container {
+  background-color: white;
+  width: 80vw;
+  min-height: 70vh;
+  margin: 20px auto 0px;
+  border-radius: 30px 30px 0px 0px;
+    /* 700 px in altına düşünce logo ve like yan yana gelecek search alanı alta geçecek 
+    daha anlaşılır olması için logo , search-form ve like için ayrı css kodu yazılmıştır */
+    .logo{
+        grid-area: logo;
+    }
+
+    .search-form{
+        grid-area: search;
+
+    }
+
+    .like{
+        grid-area: like;
+    }
+  header {
+    display: grid;
+    padding: 20px 40px;
+    background-color: rgba(255, 192, 203, 0.338);
+    border-radius: 30px 30px 0px 0px;
+    grid-template-areas: 'logo search like';
+    @include ipad{
+        grid-template-areas: 
+        'logo like'
+        'search search';
+    }
+   
+
+    .search-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+
+      form{
+        background-color: white;
+        border-radius: 10px;
+       
+      }
+      input {
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 10px;
+        width: 300px;
+        @include mobil{
+            width: 150px;
+        }
+       
+      }
+      button {
+        background-color: rgba(255, 166, 0, 0.562);
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        color: white;
+        font-weight: 800;
+        cursor: pointer;
+        @include mobil{
+            font-size: 8px;
+        }
+      }
+    }
+    .like {
+      display: flex;  
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: rgba(255, 0, 0, 0.585);
+    
+      
+     
+    }
+  }
+  .logo {
+    @include mobil{
+        width: 150px;
+    }
+    img {
+      width: 100px;
+
+    }
+  }
+}
+// main area
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  .results{
+    display: flex;
+    flex-direction: column;
+    
+    .result-link{
+        background:white;
+        padding: 10px 20px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        transition: all .3s;
+        cursor: pointer;
+        &:hover{
+            transform: translateY(-2px);
+            background-color: rgba(255, 192, 203, 0.338);
+        }
+        
+        img{
+            height: 40px;
+            width: 40px;
+            border-top: white;
+            border-radius: 50%;
+        }
+        .data{
+            h4{
+                color: rgb(228, 94, 116);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width:200px;
+            }
+           
+        }
+    }
+  }
+
+  .recipe {
+    background-color: rgba(255, 192, 203, 0.338);
+  }
+}
+
+// loader part
+
+.loader{
+  margin: 80px auto;
+  img{
+    width: 150px;
+  }
+}
+
+
+// recipe area center area
+
+.recipe-pic{
+  position: relative;
+  img{
+    width: 100%;
+  }
+  #up-text{
+    background-color: rgba(255, 132, 9, 0.816);
+    font-size: 25px;
+    width: 300px;
+    rotate: -5deg;
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+  }
+  #bottom-text{
+    background-color: rgba(255, 132, 9, 0.816);
+    font-size: 25px;
+    width: 200px;
+    rotate: -5deg;
+    position: absolute;
+    bottom: 0%;
+    left: 35%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    padding: 0px 10px 0px 0px;
+  
+  }
+}
+
+.recipe-mid{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.218);
+  .recipe-mid-left{
+    
+    i{
+      color: orange;
+    }
+  }
+  .recipe-mid-center{
+    display: flex;
+    gap: 10px;
+    i{
+      color: orange;
+    }
+  }
+  .recipe-like{
+    i{
+      background-color: orange;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.recipe-end{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+
+  .end-left, .end-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    i{
+      color: orange;
+    }
+  }
+ 
+}
+.btn-shopping-list{
+ display: flex;
+ justify-content: center;
+ padding: 20px;
+ 
+  button{
+    border: 1px solid blue;
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color:rgba(255, 166, 0, 0.688) ;
+    border: none;
+    color: white;
+    font-weight: 600;
+  }
+  
+
+}
+

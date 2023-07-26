@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <a href="">
+            <img src="images/fff-removebg-preview.png" alt="" />
+          </a>
+        </div>
+        <div class="search-form">
+          <form>
+            <input
+              type="text"
+              placeholder="search 'pizza', 'burger' or 'anyfood'"
+            />
+            <button><i class="bi bi-search"></i> search</button>
+          </form>
+        </div>
+
+        <div class="like">
+          <i class="bi bi-heart-fill"></i>
+        </div>
+      </header>
+      <main class="bottom">
+        <section class="results"></section>
+        <!-- recipe area -->
+        <section class="recipe">
+          <!-- recipe pic -->
+          <div class="recipe-pic">
+            <img src="http://forkify-api.herokuapp.com/images/sliders089d.jpg" alt="">
+            <p id="up-text">SPICY WHISKEY BBQ</p>
+            <p id="bottom-text">SLIDERS</p>
+          </div>
+          <!-- /recipe pic -->
+          <!-- recipe center area -->
+          <div class="recipe-mid">
+            <div class="recipe-mid-left">
+              <i class="bi bi-alarm"></i>
+              <span><b>45</b> MINUTES</span>
+            </div>
+            <div class="recipe-mid-center">
+              <i class="bi bi-people-fill"></i>
+              <span><b>4</b> SERVINGS</span>
+              <i class="bi bi-dash-circle-fill"></i>
+              <i class="bi bi-plus-circle-fill"></i>
+            </div>
+            <div class="recipe-like">
+              <i class="bi bi-heart"></i>
+            </div>
+          </div>
+          <!-- /recipe center area -->
+          <div class="recipe-end">
+            <div class="end-left">
+              <div class="first-line">
+                <i class="bi bi-check-circle"></i>
+                <span>2 pound ground meat</span>
+              </div>
+              <div>
+                <i class="bi bi-check-circle"></i>
+                <span>2 pound ground meat</span>
+              </div>
+              <div>
+                <i class="bi bi-check-circle"></i>
+                <span>2 pound ground meat</span>
+              </div>
+              <div>
+                <i class="bi bi-check-circle"></i>
+                <span>2 pound ground meat</span>
+              </div>
+            </div>
+            <div class="end-right">
+              <div class="first-line">
+                <i class="bi bi-check-circle"></i>
+                <span>2 pound ground meat</span>
+              </div>
+              <div>
+                <i class="bi bi-check-circle"></i>
+                <span>2 pound ground meat</span>
+              </div>
+              <div>
+                <i class="bi bi-check-circle"></i>
+                <span>2 pound ground meat</span>
+              </div>
+              <div>
+                <i class="bi bi-check-circle"></i>
+                <span>2 pound ground meat</span>
+              </div>
+            </div>
+          </div>
+          <div class="btn-shopping-list">
+            <button class="add-btn"><i class="bi bi-cart3"></i> ADD TO SHOPPING LIST</button>
+          </div>
+        </section>
+        <section class="shopping"></section>
+      </main>
+    </div>
+
+    <script type="module" src="main.js" ></script>
+  </body>
+</html>
+ 
+
+<!-- shopping list butonu kaldı -->

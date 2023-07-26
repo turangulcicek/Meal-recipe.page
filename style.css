@@ -1,0 +1,222 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+}
+
+.container {
+  background-color: white;
+  width: 80vw;
+  min-height: 70vh;
+  margin: 20px auto 0px;
+  border-radius: 30px 30px 0px 0px;
+  /* 700 px in altına düşünce logo ve like yan yana gelecek search alanı alta geçecek 
+  daha anlaşılır olması için logo , search-form ve like için ayrı css kodu yazılmıştır */
+}
+.container .logo {
+  grid-area: logo;
+}
+.container .search-form {
+  grid-area: search;
+}
+.container .like {
+  grid-area: like;
+}
+.container header {
+  display: grid;
+  padding: 20px 40px;
+  background-color: rgba(255, 192, 203, 0.338);
+  border-radius: 30px 30px 0px 0px;
+  grid-template-areas: "logo search like";
+}
+@media (max-width: 800px) {
+  .container header {
+    grid-template-areas: "logo like" "search search";
+  }
+}
+.container header .search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container header .search-form form {
+  background-color: white;
+  border-radius: 10px;
+}
+.container header .search-form input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+@media (max-width: 600px) {
+  .container header .search-form input {
+    width: 150px;
+  }
+}
+.container header .search-form button {
+  background-color: rgba(255, 166, 0, 0.562);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .container header .search-form button {
+    font-size: 8px;
+  }
+}
+.container header .like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.585);
+}
+@media (max-width: 600px) {
+  .container .logo {
+    width: 150px;
+  }
+}
+.container .logo img {
+  width: 100px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.bottom .results {
+  display: flex;
+  flex-direction: column;
+}
+.bottom .results .result-link {
+  background: white;
+  padding: 10px 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.bottom .results .result-link:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 192, 203, 0.338);
+}
+.bottom .results .result-link img {
+  height: 40px;
+  width: 40px;
+  border-top: white;
+  border-radius: 50%;
+}
+.bottom .results .result-link .data h4 {
+  color: rgb(228, 94, 116);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 200px;
+}
+.bottom .recipe {
+  background-color: rgba(255, 192, 203, 0.338);
+}
+
+.loader {
+  margin: 80px auto;
+}
+.loader img {
+  width: 150px;
+}
+
+.recipe-pic {
+  position: relative;
+}
+.recipe-pic img {
+  width: 100%;
+}
+.recipe-pic #up-text {
+  background-color: rgba(255, 132, 9, 0.816);
+  font-size: 25px;
+  width: 300px;
+  rotate: -5deg;
+  position: absolute;
+  bottom: 5%;
+  left: 25%;
+  color: white;
+  font-weight: 800;
+  padding: 10px;
+}
+.recipe-pic #bottom-text {
+  background-color: rgba(255, 132, 9, 0.816);
+  font-size: 25px;
+  width: 200px;
+  rotate: -5deg;
+  position: absolute;
+  bottom: 0%;
+  left: 35%;
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  padding: 0px 10px 0px 0px;
+}
+
+.recipe-mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.218);
+}
+.recipe-mid .recipe-mid-left i {
+  color: orange;
+}
+.recipe-mid .recipe-mid-center {
+  display: flex;
+  gap: 10px;
+}
+.recipe-mid .recipe-mid-center i {
+  color: orange;
+}
+.recipe-mid .recipe-like i {
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.recipe-end {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.recipe-end .end-left, .recipe-end .end-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.recipe-end .end-left i, .recipe-end .end-right i {
+  color: orange;
+}
+
+.btn-shopping-list {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.btn-shopping-list button {
+  border: 1px solid blue;
+  padding: 15px 30px;
+  border-radius: 20px;
+  background-color: rgba(255, 166, 0, 0.688);
+  border: none;
+  color: white;
+  font-weight: 600;
+}/*# sourceMappingURL=style.css.map */
